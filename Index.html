@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CareSync | Modern Clinic Appointments</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styleclinic.css">
+</head>
+<body class="page-index">
+  <div id="welcomeOverlay" class="welcome-overlay" aria-hidden="true" role="presentation">
+    <div class="welcome-modal" role="dialog" aria-modal="true" aria-labelledby="welcomeTitle">
+      <button type="button" class="welcome-close" id="welcomeClose" aria-label="Close welcome message">×</button>
+      <div class="welcome-modal__icon" aria-hidden="true">+</div>
+      <h2 id="welcomeTitle">Welcome to CareSync</h2>
+      <p class="welcome-modal__text">
+        We're glad you're here. Book appointments online anytime—your care journey starts with a single click.
+      </p>
+      <div class="welcome-timer" aria-hidden="true">
+        <div class="welcome-timer__track">
+          <div class="welcome-timer__fill" id="welcomeTimerFill"></div>
+        </div>
+        <p class="welcome-timer__label">
+          Closing in <span id="welcomeSeconds">5</span>s
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a href="Index.html" class="brand">
+        <span class="brand-mark">+</span>
+        <span>CareSync</span>
+      </a>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="main-nav" id="mainNav">
+        <a href="Index.html">Home</a>
+        <a href="booking.html">Book Appointment</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+        <a href="login.html">Login</a>
+        <a href="register.html" class="btn btn-small">Register</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="heroSection">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <p class="eyebrow hero-animate-item">Welcome to CareSync</p>
+          <h1 class="hero-animate-item">Book Your Clinic Appointment Online</h1>
+          <p class="hero-copy hero-animate-item">
+            Patients can easily schedule appointments through our website in just a few clicks. CareSync provides a fast, secure, and convenient booking experience from any device.
+          </p>
+          <div class="hero-actions hero-animate-item">
+            <a href="booking.html" class="btn">Book Appointment</a>
+            <a href="#services" class="btn btn-ghost">View Services</a>
+          </div>
+        </div>
+        <div class="hero-card hero-animate-item">
+          <h3>Open Hours</h3>
+          <ul>
+            <li><span>Mon - Fri</span> <strong>8:00 AM - 7:00 PM</strong></li>
+            <li><span>Saturday</span> <strong>9:00 AM - 3:00 PM</strong></li>
+            <li><span>Sunday</span> <strong>Closed</strong></li>
+          </ul>
+          <p class="note">Walk-ins accepted based on availability.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="services">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Our services</p>
+          <h2>Care options for every stage of life</h2>
+        </div>
+        <div class="cards">
+          <article class="card">
+            <h3>General Consultation</h3>
+            <p>Routine checkups and personalized health guidance from experienced physicians.</p>
+          </article>
+          <article class="card">
+            <h3>Pediatric Care</h3>
+            <p>Compassionate and preventive care for infants, children, and adolescents.</p>
+          </article>
+          <article class="card">
+            <h3>Dental Checkup</h3>
+            <p>Regular oral health assessments to help maintain a confident, healthy smile.</p>
+          </article>
+          <article class="card">
+            <h3>Health Screening</h3>
+            <p>Early detection services and wellness screenings to support long-term health.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section muted" id="doctors">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Our doctors</p>
+          <h2>Meet our trusted specialists</h2>
+        </div>
+        <div class="cards doctor-cards">
+          <article class="card doctor-card">
+            <div class="photo-placeholder">Photo Placeholder</div>
+            <h3>Dr. Priya Sharma</h3>
+            <p>Specialization: General Physician</p>
+          </article>
+          <article class="card doctor-card">
+            <div class="photo-placeholder">Photo Placeholder</div>
+            <h3>Dr. Arjun Mehta</h3>
+            <p>Specialization: Pediatrician</p>
+          </article>
+          <article class="card doctor-card">
+            <div class="photo-placeholder">Photo Placeholder</div>
+            <h3>Dr. Neha Kapoor</h3>
+            <p>Specialization: Dental Surgeon</p>
+          </article>
+          <article class="card doctor-card">
+            <div class="photo-placeholder">Photo Placeholder</div>
+            <h3>Dr. Ashley Philip</h3>
+            <p>Specialization: General Physician</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="cta">
+      <div class="container hero-card">
+        <h2>Ready to book your visit?</h2>
+        <p class="hero-copy">
+          Choose your preferred date and time online and let CareSync streamline your clinic experience.
+        </p>
+        <a href="booking.html" class="btn">Book Appointment</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="contact">
+    <div class="container footer-wrap">
+      <p>CareSync Clinic, 12 Wellness Avenue, Downtown</p>
+      <p>Email: hello@caresync.example | Phone: +1 (000) 123-4567</p>
+      <p class="copyright">© <span id="currentYear"></span> CareSync. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="scriptclinic.js"></script>
+</body>
+</html>

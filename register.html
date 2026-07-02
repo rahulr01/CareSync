@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CareSync | Patient Registration</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styleclinic.css">
+</head>
+
+<body>
+  <div class="page-bg"></div>
+  <header class="navbar">
+    <nav class="nav-wrapper" aria-label="Main navigation">
+      <div class="nav-left">
+        <a href="#" class="logo" aria-label="Travel booking logo">
+          <span class="logo-mark" aria-hidden="true">
+            <span class="logo-sun"></span>
+            <span class="logo-peak left-peak"></span>
+            <span class="logo-peak right-peak"></span>
+          </span>
+          SkyTrail
+        </a>
+        <button class="nav-button" type="button">Home</button>
+        <button class="nav-button" type="button">Contact</button>
+        <button class="nav-button" type="button">About</button>
+      </div>
+      <div class="nav-right">
+        <button class="nav-button" type="button" onclick="window.location.href='login.html'">Login</button>
+        <button class="nav-button" type="button" onclick="window.location.href='register.html'">Register</button>
+      </div>
+    </nav>
+  </header>
+
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a href="Index.html" class="brand">
+        <span class="brand-mark">+</span>
+        <span>CareSync</span>
+      </a>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="main-nav" id="mainNav">
+        <a href="Index.html">Home</a>
+        <a href="booking.html">Book Appointment</a>
+        <a href="Index.html#services">Services</a>
+        <a href="Index.html#contact">Contact</a>
+        <a href="login.html">Login</a>
+        <a href="register.html" class="btn btn-small">Register</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="booking-page">
+    <div class="container booking-shell">
+      <h1>Create Your Account</h1>
+      <p class="booking-intro">Register to book and manage appointments with CareSync.</p>
+
+      <form id="registerForm" class="booking-form" action="/api/auth/register" method="post" novalidate>
+        <div class="form-grid">
+          <div class="field">
+            <label for="regName">Name of the Patient</label>
+            <input id="regName" name="name" type="text" placeholder="Enter full name" autocomplete="name" required>
+          </div>
+
+          <div class="field">
+            <label for="regEmail">Email address</label>
+            <input id="regEmail" name="email" type="email" placeholder="you@example.com" autocomplete="email" required>
+          </div>
+        </div>
+
+        <div class="form-grid">
+          <div class="field">
+            <label for="regPassword">Password</label>
+            <input id="regPassword" name="password" type="password" placeholder="Create a password"
+              autocomplete="new-password" required>
+          </div>
+
+          <div class="field">
+            <label for="regPasswordAgain">Password again</label>
+            <input id="regPasswordAgain" name="passwordAgain" type="password" placeholder="Re-enter your password"
+              autocomplete="new-password" required>
+          </div>
+        </div>
+
+        <fieldset class="radio-group" aria-describedby="roleHelp">
+          <legend>Registration type</legend>
+          <div class="radio-options">
+            <label class="radio-option">
+              <input type="radio" name="registrationRole" value="patient" required>
+              <span>I'm the patient</span>
+            </label>
+            <label class="radio-option">
+              <input type="radio" name="registrationRole" value="bystander" required>
+              <span>I am the bystander registering on behalf of the patient</span>
+            </label>
+          </div>
+          <p id="roleHelp" class="hint">Please select one option (required).</p>
+        </fieldset>
+
+        <button type="submit" class="btn">Create Account</button>
+        <p id="registerStatus" class="form-status" aria-live="polite"></p>
+
+        <p class="auth-switch">
+          Already have an account? <a class="link" href="login.html">Login</a>
+        </p>
+      </form>
+    </div>
+  </main>
+
+  <footer class="site-footer" id="contact">
+    <div class="container footer-wrap">
+      <p>CareSync Clinic, 12 Wellness Avenue, Downtown</p>
+      <p>Email: hello@caresync.example | Phone: +1 (000) 123-4567</p>
+      <p class="copyright">© <span id="currentYear"></span> CareSync. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="scriptclinic.js"></script>
+</body>
+
+</html>

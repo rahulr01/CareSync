@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CareSync | Book Appointment</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styleclinic.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a href="Index.html" class="brand">
+        <span class="brand-mark">+</span>
+        <span>CareSync</span>
+      </a>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="main-nav" id="mainNav">
+        <a href="Index.html">Home</a>
+        <a href="booking.html">Book Appointment</a>
+        <a href="Index.html#services">Services</a>
+        <a href="#contact">Contact</a>
+        <a href="login.html">Login</a>
+        <a href="register.html" class="btn btn-small">Register</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="booking-page">
+    <div class="container booking-shell">
+      <h1>Book an Appointment</h1>
+      <p class="booking-intro">
+        Complete the form below to request your clinic appointment with CareSync.
+      </p>
+
+      <form id="appointmentForm" class="booking-form" action="/api/appointments" method="post">
+        <div class="form-grid">
+          <div class="field">
+            <label for="patientName">Patient Name</label>
+            <input id="patientName" name="patientName" type="text" placeholder="Enter full name" required>
+          </div>
+
+          <div class="field">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" placeholder="you@example.com" required>
+          </div>
+
+          <div class="field">
+            <label for="phone">Phone Number</label>
+            <input id="phone" name="phone" type="tel" placeholder="+1 000 123 4567" required>
+          </div>
+
+          <div class="field">
+            <label for="appointmentDate">Appointment Date</label>
+            <input id="appointmentDate" name="appointmentDate" type="date" required>
+          </div>
+
+          <div class="field">
+            <label for="appointmentTime">Appointment Time</label>
+            <input id="appointmentTime" name="appointmentTime" type="time" required>
+          </div>
+
+          <div class="field">
+            <label for="doctor">Doctor Selection</label>
+            <select id="doctor" name="doctor" required>
+              <option value="">Select a doctor</option>
+              <option value="dr-priya-sharma">Dr. Priya Sharma - General Physician</option>
+              <option value="dr-arjun-mehta">Dr. Arjun Mehta - Pediatrician</option>
+              <option value="dr-neha-kapoor">Dr. Neha Kapoor - Dental Surgeon</option>
+              <option value="dr-ashley-philip">Dr. Ashley Philip - General Physician</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="reasonForVisit">Reason for Visit</label>
+          <textarea id="reasonForVisit" name="reasonForVisit" rows="4" placeholder="Briefly describe your concern or appointment purpose." required></textarea>
+        </div>
+
+        <button type="submit" class="btn">Submit Appointment Request</button>
+        <p id="formStatus" class="form-status" aria-live="polite"></p>
+      </form>
+    </div>
+  </main>
+
+  <footer class="site-footer" id="contact">
+    <div class="container footer-wrap">
+      <p>CareSync Clinic, 12 Wellness Avenue, Downtown</p>
+      <p>Email: hello@caresync.example | Phone: +1 (000) 123-4567</p>
+      <p class="copyright">© <span id="currentYear"></span> CareSync. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="scriptclinic.js"></script>
+</body>
+</html>
