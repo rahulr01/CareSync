@@ -42,8 +42,7 @@ CareSync is a responsive, front-end clinic appointment booking website. It lets 
 
 
    # Using Python
-   python3 -m http.server 8000
-
+   python3 -m http.server 8000 
    # Then visit
 
 
