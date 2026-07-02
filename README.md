@@ -32,8 +32,6 @@ CareSync is a responsive, front-end clinic appointment booking website. It lets 
 
 1. Clone the repository:
 
-bash : -
-
 &#x20;  git clone https://github.com/rahulr01/CareSync.git
 
 
