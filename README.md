@@ -2,8 +2,7 @@
 
 CareSync is a responsive, front-end clinic appointment booking website. It lets patients browse services and doctors, register/login, and submit appointment requests through a clean, modern interface.
 
-This project was built with AI-assisted tool (Cursor).
-
+> Built during a Nesote Technologies company workshop on front-end web development (April 2026).
 ## 
 
 ## Features
